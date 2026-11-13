@@ -1,51 +1,153 @@
-<style>
-    body {
-        background-color: pink;
-        color: white;
-        font-family: Arial, sans-serif;
-        text-align: center;
-        padding: 0;
-        margin: 0;
-    }
-    header {
-        background-color: #e6007e; /* Fucsia estilo Druni */
-        color: #ffffff;
-        padding: 30px 20px;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-        margin-bottom: 30px;
-    }
-    h1 {
-        font-size: 2rem;
-        text-transform: uppercase;
-        font-weight: bold;
-        margin-bottom: 8px;
-    }
-    h2 {
-        font-size: 1.1rem;
-        font-weight: normal;
-        letter-spacing: 1px;
-    }
-    p {
-        font-size: 1.1rem;
-        margin-bottom: 30px;
-        font-weight: bold;
-    }
-    .video-container {
-        margin: 20px auto;
-        max-width: 560px;
-        position: relative;
-        padding-bottom: 56.25%;
-        height: 0;
-        overflow: hidden;
-        border-radius: 8px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    }
-    .video-container iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border: 0;
-    }
-</style>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carla Manga Gallardo — Colección Exclusiva</title>
+    <!-- Tailwind CSS CDN para un diseño limpio, moderno y responsivo -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        neutralBg: '#F9F8F6',
+                        charcoal: '#111111',
+                        softGray: '#E5E5E0',
+                        brandSubtle: '#8C8C8C'
+                    },
+                    fontFamily: {
+                        sans: ['Helvetica Neue', 'Arial', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-[#F9F8F6] text-[#111111] font-sans antialiased selection:bg-black selection:text-white">
+
+    <!-- Header / Barra de Navegación Minimalista -->
+    <header class="sticky top-0 z-50 bg-[#F9F8F6]/90 backdrop-blur-md border-b border-stone-200">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="text-xs uppercase tracking-[0.3em] font-medium text-stone-500">
+                SS26 Lookbook
+            </div>
+            <h1 class="text-xl md:text-2xl font-light tracking-[0.25em] uppercase text-center">
+                Carla Manga Gallardo
+            </h1>
+            <nav class="hidden md:flex items-center space-x-8 text-xs uppercase tracking-[0.2em] font-medium">
+                <a href="#editorial" class="hover:text-stone-500 transition-colors">Editorial</a>
+                <a href="#campana" class="hover:text-stone-500 transition-colors">Campaña</a>
+                <a href="#contacto" class="hover:text-stone-500 transition-colors">Contacto</a>
+            </nav>
+            <!-- Icono de menú móvil simplificado -->
+            <button class="md:hidden text-xs uppercase tracking-widest font-medium">Menú</button>
+        </div>
+    </header>
+
+    <!-- Contenido Principal Estilo Lookbook -->
+    <main class="max-w-7xl mx-auto px-6 py-12 md:py-20">
+
+        <!-- Sección de Bienvenida / Hero Editorial -->
+        <section id="editorial" class="mb-20">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                <div class="md:col-span-5 space-y-6">
+                    <span class="inline-block text-[11px] uppercase tracking-[0.3em] px-3 py-1 bg-stone-200 rounded-full font-medium">
+                        Nueva Colección
+                    </span>
+                    <h2 class="text-4xl md:text-6xl font-light tracking-tight leading-[1.1]">
+                        Hola, mundo
+                    </h2>
+                    <p class="text-stone-600 font-light text-base md:text-lg leading-relaxed">
+                        Este es el contenido visible de la página. Un espacio donde la moda urbana minimalista se encuentra con la expresión personal y las líneas limpias de alta costura.
+                    </p>
+                    <div class="pt-4 flex items-center space-x-4">
+                        <a href="#campana" class="inline-block bg-black text-white text-xs uppercase tracking-[0.2em] px-8 py-4 rounded-none hover:bg-stone-800 transition-all">
+                            Ver Campaña
+                        </a>
+                    </div>
+                </div>
+                <div class="md:col-span-7">
+                    <div class="aspect-[4/5] bg-stone-200 overflow-hidden relative group">
+                        <img src="https://placehold.co/800x1000/E5E5E0/111111?text=Carla+Manga+Gallardo+Lookbook" alt="Lookbook Editorial" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-black/10"></div>
+                        <div class="absolute bottom-6 left-6 text-white text-xs uppercase tracking-widest">
+                            Ref. 2026 // Urban Minimal
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cuadrícula de Estilo Lookbook / Galería Neutra -->
+        <section class="mb-24">
+            <div class="text-center max-w-xl mx-auto mb-16 space-y-3">
+                <h3 class="text-xs uppercase tracking-[0.3em] text-stone-500 font-medium">Esenciales</h3>
+                <p class="text-2xl md:text-3xl font-light">Diseño, texturas y siluetas esenciales</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="space-y-3">
+                    <div class="aspect-[3/4] bg-stone-200 overflow-hidden">
+                        <img src="https://placehold.co/600x800/EAE5E0/333333?text=Editorial+01" alt="Editorial 1" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="flex justify-between items-center text-xs tracking-widest uppercase pt-2">
+                        <span>Silueta Oversize</span>
+                        <span class="text-stone-400">01</span>
+                    </div>
+                </div>
+                <div class="space-y-3">
+                    <div class="aspect-[3/4] bg-stone-200 overflow-hidden">
+                        <img src="https://placehold.co/600x800/E5E5E5/333333?text=Editorial+02" alt="Editorial 2" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="flex justify-between items-center text-xs tracking-widest uppercase pt-2">
+                        <span>Tonos Neutros</span>
+                        <span class="text-stone-400">02</span>
+                    </div>
+                </div>
+                <div class="space-y-3">
+                    <div class="aspect-[3/4] bg-stone-200 overflow-hidden">
+                        <img src="https://placehold.co/600x800/E0E0E0/333333?text=Editorial+03" alt="Editorial 3" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="flex justify-between items-center text-xs tracking-widest uppercase pt-2">
+                        <span>Corte Estructural</span>
+                        <span class="text-stone-400">03</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Campaña / Video Incrustado -->
+        <section id="campana" class="bg-stone-100 border border-stone-200 p-8 md:p-16 mb-20">
+            <div class="max-w-3xl mx-auto text-center space-y-6 mb-10">
+                <span class="text-xs uppercase tracking-[0.3em] text-stone-500 font-medium">Multimedia & Video</span>
+                <h3 class="text-3xl md:text-4xl font-light tracking-tight">Campaña Oficial SS26</h3>
+                <p class="text-stone-600 font-light text-sm md:text-base">
+                    Sumérgete en la atmósfera visual y el concepto detrás de la nueva propuesta de Carla Manga Gallardo.
+                </p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto shadow-2xl bg-black aspect-video overflow-hidden relative">
+                <iframe class="w-full h-full" src="https://www.youtube.com/embed/UCBc_3u0kq0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </section>
+
+    </main>
+    
+    <!-- Footer Minimalista -->
+    <footer class="border-t border-stone-200 bg-[#F9F8F6] py-16">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center space-y-8 md:space-y-0">
+            <div class="text-center md:text-left">
+                <h4 class="text-sm uppercase tracking-[0.25em] font-medium">Carla Manga Gallardo</h4>
+                <p class="text-xs text-stone-500 mt-1">Todos los derechos reservados © 2026</p>
+            </div>
+            <div class="flex space-x-8 text-xs uppercase tracking-[0.2em] text-stone-600">
+                <a href="#" class="hover:text-black transition-colors">Instagram</a>
+                <a href="#" class="hover:text-black transition-colors">TikTok</a>
+                <a href="#" class="hover:text-black transition-colors">Spotify</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
